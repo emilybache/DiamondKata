@@ -1,4 +1,4 @@
 **/.idea
 scala/project
-scala/target
+**/target
 **/*.iml
