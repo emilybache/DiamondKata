@@ -2,3 +2,4 @@
 scala/project
 **/target
 **/*.iml
+**/*.pyc
