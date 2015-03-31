@@ -10,8 +10,7 @@ import org.scalatest.{Matchers, FlatSpec}
  * 2. change the 'ignore' to 'in' for the next test case. Make it pass.
  * 3. Uncomment the next line of the test case. Make it pass
  * 4. When all the lines of code in the test case are passing, continue to the next test case.
- * 5. When all the
- * test cases in this file are uncommented and passing, you should have a full working solution.
+ * 5. When all the test cases in this file are uncommented and passing, you should have a full working solution.
  */
 
 class DiamondIncrementalSpec extends FlatSpec with Matchers {

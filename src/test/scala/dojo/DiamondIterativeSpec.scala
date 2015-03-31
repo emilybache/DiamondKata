@@ -46,7 +46,7 @@ class DiamondIterativeSpec extends FlatSpec with Matchers {
          |  A""".stripMargin)
   }
 
-  "Diamond B" should "have letters twice on rows except first and last" ignore {
+  "Diamond B" should "duplicate the B in the middle row" ignore {
     Diamond.print('B') should be (" A\nBB\n A")
   }
 
@@ -64,13 +64,13 @@ class DiamondIterativeSpec extends FlatSpec with Matchers {
     Diamond.print('B') should be (" A\nB B\n A")
   }
 
-  "Diamond C" should "have between spaces" ignore {
+  "Diamond C" should "have between spaces on all rows except first and last" ignore {
     Diamond.print('C') should be (
       """|  A
-        | B B
-        |C   C
-        | B B
-        |  A""".stripMargin)
+         | B B
+         |C   C
+         | B B
+         |  A""".stripMargin)
   }
 
   "Diamond D" should "be correct in all aspects" ignore {
