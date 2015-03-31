@@ -29,6 +29,10 @@ class DiamondIterativeSpec extends FlatSpec with Matchers {
     Diamond.print('B') should be ("ABA")
   }
 
+  "Diamond C" should "print a char sequence for the top and bottom halves" ignore {
+    Diamond.print('C') should be ("ABCBA")
+  }
+
   "Diamond B" should "have newlines" ignore {
     Diamond.print('B') should be ("A\nB\nA")
   }
