@@ -20,8 +20,10 @@ class DiamondIncrementalSpec extends FlatSpec with Matchers {
   }
 
   "letter sequence" should "give the list of letters on each line in the diamond" ignore {
-    new Diamond('B').char_sequence should be (Seq('A', 'B', 'A'))
+    new Diamond('A').char_sequence should be (Seq('A'))
+    //new Diamond('B').char_sequence should be (Seq('A', 'B', 'A'))
     //new Diamond('C').char_sequence should be (Seq('A', 'B', 'C', 'B', 'A'))
+    //new Diamond('D').char_sequence should be (Seq('A', 'B', 'C', 'D', 'C', 'B', 'A'))
   }
 
   "indents" should "give a list of indents for each line of the diamond" ignore {
@@ -42,7 +44,7 @@ class DiamondIncrementalSpec extends FlatSpec with Matchers {
     new Diamond('A').one_row('A', indent=0, between=0) should be (Seq('A'))
     //new Diamond('B').one_row('A', indent=1, between=0) should be (Seq(' ', 'A'))
     //new Diamond('B').one_row('B', indent=0, between=1) should be (Seq('B', ' ', 'B'))
-    //new Diamond('C').one_row('C', indent=1, between=2) should be (Seq(' ', 'C', ' ', ' ', 'C'))
+    //new Diamond('D').one_row('C', indent=1, between=3) should be (Seq(' ', 'C', ' ', ' ', ' ', 'C'))
   }
 
   "row" should "create a sequence representing the diamond rows" ignore {
