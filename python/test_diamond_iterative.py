@@ -1,8 +1,7 @@
 """
 These test cases can be used to test-drive a solution to the diamond kata, in an interative manner.
-Keep only one test case for "Diamond A", one for "Diamond B" and one for "Diamond C" at any one time.
-The idea is that you iterate towards a full solution. Seb Rose calls it 'recycling' tests.
-See http://claysnow.co.uk/recycling-tests-in-tdd/
+Enable only one test case for "Diamond A", one for "Diamond B" and one for "Diamond C" at any one time.
+The idea is that you iterate towards a full solution.
 
 to run the tests, use 'py.test' - see http://pytest.org
 

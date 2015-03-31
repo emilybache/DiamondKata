@@ -6,6 +6,8 @@ this kata from scratch in any way you wish. This repo will help you to explore t
 problem - an interative approach, where you 'recycle' test cases, and an incremental approach, where all test cases
 are valid for the full solution.
 
+For more discussion of 'test recycling' see Seb Rose's [blog post](http://claysnow.co.uk/recycling-tests-in-tdd/)
+
 Kata Description
 ----------------
 
