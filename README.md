@@ -40,8 +40,8 @@ C   C
 How to use the code in this repo
 --------------------------------
 
-* For an 'incremental' approach, test drive your implementation using 'DiamondIncrementalSpec.scala'.
-* For an 'iterative' approach, test drive your implementation using 'DiamondIterativeSpec.scala'.
+* For an 'incremental' approach, test drive your implementation using 'DiamondIncrementalTest' or 'DiamondIncrementalSpec'.
+* For an 'iterative' approach, test drive your implementation using 'DiamondIterativeTest' or 'DiamondIterativeSpec'.
 
 I suggest you try the kata both ways. In a Coding Dojo, you could have half the group do it one way while the other
 half does it the other way, then swap. Suggested questions for the retrospective when you compare the approaches:

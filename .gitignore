@@ -1,4 +1,4 @@
-.idea
-project
-target
-*.iml
+**/.idea
+scala/project
+scala/target
+**/*.iml
