@@ -52,4 +52,5 @@ half does it the other way, then swap. Suggested questions for the retrospective
 * How easy is it to pinpoint what is wrong when you make a mistake?
 * How easy is it to refactor the implementation?
 * The incremental tests define several public methods on Diamond. Should they be public? What would happen if they weren't?
+* The iterative approach asks you to delete test cases along the way. Should you do that in general?
 * Which approach (iterative or incremental) should you use when doing TDD in general?
