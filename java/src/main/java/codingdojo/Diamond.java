@@ -15,22 +15,6 @@ public class Diamond {
         return new ArrayList<List<Character>>();
     }
 
-    public List<Character> getLetterSequence() {
-        return new ArrayList<Character>();
-    }
-
-    public List<Integer> getIndentationSequence() {
-        return new ArrayList<Integer>();
-    }
-
-    public List<Integer> getBetweenSequence() {
-        return new ArrayList<Integer>();
-    }
-
-    public List<Character> getOneRow(char letter, int indent, int between) {
-        return new ArrayList<Character>();
-    }
-
     public static String print(char middleLetter) {
         Diamond diamond = new Diamond(middleLetter);
         StringBuffer result = new StringBuffer();

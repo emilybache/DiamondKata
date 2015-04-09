@@ -3,15 +3,8 @@ package dojo
 
 class Diamond(val middleLetter: Char) {
 
-  def char_sequence(): Seq[Char] = ???
-
-  def indents: Seq[Int] = ???
-
-  def between: Seq[Int] = ???
-
   def rows: Seq[Seq[Char]] = ???
 
-  def one_row(letter: Char, indent: Int, between: Int): Seq[Char] = ???
 }
 
 object Diamond {

@@ -8,8 +8,8 @@ to run the tests, use 'py.test' - see http://pytest.org
 Instructions:
 1. Make the first test for Diamond A (which is failing) pass
 2. change the 'ignore_' to 'test_' in the next test case. Make it pass too.
-3. change the 'test_' back to 'ignore_' in that test case, and instead use the following test case
-4. keep doing this until you have exactly one test case for each diamond, and you've got to the end of the file.
+3. change the 'test_' back to 'ignore_' in that test case, (or delete it), and instead use the following test case
+4. keep doing this until you have exactly one test case for each diamond, (A, B, and C), and you've got to the end of the file.
 At that point you should have a working implementation.
 
 """

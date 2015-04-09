@@ -13,8 +13,8 @@ import static org.junit.Assert.assertEquals;
  * Instructions:
  * 1. Make the first test for Diamond A (which is failing) pass
  * 2. Remove the '@Ignore' on the next test case. Make it pass too.
- * 3. Replace the '@Ignore' on that test case, and instead enable the following test case
- * 4. keep doing this, always having exactly one enabled test case for each diamond, until you've got to the end of the file.
+ * 3. Replace the '@Ignore' on that test case, (or delete it), and instead enable the following test case
+ * 4. keep doing this, always having exactly one enabled test case for each diamond, (A, B, and C) until you've got to the end of the file.
  * At that point you should have a working implementation.
  */
 public class DiamondIterativeTest {

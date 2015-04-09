@@ -48,8 +48,8 @@ How to use the code in this repo
 I suggest you try the kata both ways. In a Coding Dojo, you could have half the group do it one way while the other
 half does it the other way, then swap. Suggested questions for the retrospective when you compare the approaches:
 
-* How easy is it to proceed in small steps?
+* Do the tests lead you to solve the problem in small steps?
 * How easy is it to pinpoint what is wrong when you make a mistake?
 * How easy is it to refactor the implementation?
-* Should 'one_row' be public in the Diamond class? What would happen if it wasn't?
+* The incremental tests define several public methods on Diamond. Should they be public? What would happen if they weren't?
 * Which approach (iterative or incremental) should you use when doing TDD in general?

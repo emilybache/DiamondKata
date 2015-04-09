@@ -10,8 +10,8 @@ import org.scalatest._
  * Instructions:
  * 1. Make the first test for Diamond A (which is failing) pass
  * 2. change the 'ignore' to 'in' in the next test case. Make it pass too.
- * 3. change the 'in' back to 'ignore' in that test case, and instead use the following test case
- * 4. keep doing this until you have exactly one test case for each diamond, and you've got to the end of the file.
+ * 3. change the 'in' back to 'ignore' in that test case, (or delete it), and instead use the following test case
+ * 4. keep doing this until you have exactly one test case for each diamond, (A, B and C), and you've got to the end of the file.
  * At that point you should have a working implementation.
  */
 class DiamondIterativeSpec extends FlatSpec with Matchers {

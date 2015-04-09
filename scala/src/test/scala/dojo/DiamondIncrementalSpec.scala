@@ -7,8 +7,8 @@ import org.scalatest.{Matchers, FlatSpec}
  *
  * Instructions:
  * 1. Make the first test case for Diamond A pass
- * 2. change the 'ignore' to 'in' for the next test case. Make it pass.
- * 3. Uncomment the next line of the test case. Make it pass
+ * 2. change the 'ignore' to 'in' for the next test case.
+ * 3. Uncomment the first line of the test case. Make it pass. Repeat until all the lines are uncommented
  * 4. When all the lines of code in the test case are passing, continue to the next test case.
  * 5. When all the test cases in this file are uncommented and passing, you should have a full working solution.
  */
@@ -20,28 +20,28 @@ class DiamondIncrementalSpec extends FlatSpec with Matchers {
   }
 
   "letter sequence" should "give the list of letters on each line in the diamond" ignore {
-    new Diamond('A').char_sequence should be (Seq('A'))
+    //new Diamond('A').char_sequence should be (Seq('A'))
     //new Diamond('B').char_sequence should be (Seq('A', 'B', 'A'))
     //new Diamond('C').char_sequence should be (Seq('A', 'B', 'C', 'B', 'A'))
     //new Diamond('D').char_sequence should be (Seq('A', 'B', 'C', 'D', 'C', 'B', 'A'))
   }
 
   "indents" should "give a list of indents for each line of the diamond" ignore {
-    new Diamond('A').indents should be (Seq(0))
+    //new Diamond('A').indents should be (Seq(0))
     //new Diamond('B').indents should be (Seq(1,0,1))
     //new Diamond('C').indents should be (Seq(2,1,0,1,2))
     //new Diamond('D').indents should be (Seq(3,2,1,0,1,2,3))
   }
 
   "between" should "give a list of how many middle spaces between the repeated letter there should be on each line of the diamond" ignore {
-    new Diamond('A').between should be (Seq(0))
+    //new Diamond('A').between should be (Seq(0))
     //new Diamond('B').between should be (Seq(0,1,0))
     //new Diamond('C').between should be (Seq(0,1,3,1,0))
     //new Diamond('D').between should be (Seq(0,1,3,5,3,1,0))
   }
 
   "one_row" should "create a sequence representing one diamond row" ignore {
-    new Diamond('A').one_row('A', indent=0, between=0) should be (Seq('A'))
+    //new Diamond('A').one_row('A', indent=0, between=0) should be (Seq('A'))
     //new Diamond('B').one_row('A', indent=1, between=0) should be (Seq(' ', 'A'))
     //new Diamond('B').one_row('B', indent=0, between=1) should be (Seq('B', ' ', 'B'))
     //new Diamond('D').one_row('C', indent=1, between=3) should be (Seq(' ', 'C', ' ', ' ', ' ', 'C'))
