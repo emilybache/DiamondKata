@@ -8,6 +8,10 @@ are valid for the full solution.
 
 For more discussion of 'test recycling' see Seb Rose's [blog post](http://claysnow.co.uk/recycling-tests-in-tdd/)
 
+So far I have starting code for the problem in Scala, Java and Python. The original version was the Scala, so please be
+forgiving if I have used Scala idioms or generally translated it badly into the other languages. I welcome pull requests
+with improvements and/or translations to more programming languages.
+
 Kata Description
 ----------------
 
