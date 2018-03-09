@@ -133,7 +133,7 @@ public class DiamondCentristIncrementalTest {
         assertEquals(" A \nB B\n A ", Diamond.print('B'));
     }
 
-
+    @Ignore
     @Test
     public void coordinatesOfC() {
         assertEquals(asSet(new Point(-2, 1), new Point(-2, -1),
