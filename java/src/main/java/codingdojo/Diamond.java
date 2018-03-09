@@ -1,7 +1,9 @@
 package codingdojo;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public class Diamond {
 
@@ -44,4 +46,23 @@ public class Diamond {
 
     }
 
+    public int size() {
+        return 0;
+    }
+
+    public List<List<Character>> spaceArray() {
+        return null;
+    }
+
+    public Point centerCoordinate() {
+        return null;
+    }
+
+    public static List<List<Character>> placeLetter(List<List<Character>> spaceArray, Point point, char letter) {
+        return spaceArray;
+    }
+
+    public Set<Point> coordinates(char letter) {
+        return null;
+    }
 }

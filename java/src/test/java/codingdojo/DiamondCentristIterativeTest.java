@@ -153,7 +153,7 @@ public class DiamondCentristIterativeTest {
     @Ignore
     @Test
     public void DiamondB() {
-        assertEquals(" A\nB B\n A", Diamond.print('B'));
+        assertEquals(" A \nB B\n A ", Diamond.print('B'));
     }
 
     @Ignore
@@ -181,23 +181,23 @@ public class DiamondCentristIterativeTest {
     @Test
     public void print_DiamondC() {
         assertEquals(
-       "  A\n" +
-                " B B\n" +
+       "  A  \n" +
+                " B B \n" +
                 "C   C\n" +
-                " B B\n" +
-                "  A", Diamond.print('C'));
+                " B B \n" +
+                "  A  ", Diamond.print('C'));
     }
 
     @Ignore
     @Test
     public void print_DiamondD() {
         assertEquals(
-       "   A\n" +
-                "  B B\n" +
-                " C   C\n" +
+       "   A   \n" +
+                "  B B  \n" +
+                " C   C \n" +
                 "D     D\n" +
-                " C   C\n" +
-                "  B B\n" +
-                "   A", Diamond.print('D'));
+                " C   C \n" +
+                "  B B  \n" +
+                "   A   ", Diamond.print('D'));
     }
 }
