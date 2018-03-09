@@ -15,6 +15,12 @@ public class Diamond {
         return new ArrayList<List<Character>>();
     }
 
+
+    public static List<List<Character>> diamond(char middleLetter) {
+        Diamond diamond = new Diamond(middleLetter);
+        return diamond.getRows();
+    }
+
     public static String print(char middleLetter) {
         Diamond diamond = new Diamond(middleLetter);
         StringBuffer result = new StringBuffer();
