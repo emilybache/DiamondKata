@@ -9,7 +9,7 @@ Instructions:
 3. Uncomment the next line of the test case. Make it pass
 4. When all the lines of code in the test case are passing, continue to the next test case.
 5. When all the test cases in this file are uncommented and passing, you should have a full working solution.
-""" 
+"""
 
 import diamond
 
@@ -18,9 +18,9 @@ def test_diamondA_has_one_line_containing_a():
 
 def ignore_letter_sequence_is_list_of_letters_on_each_line_of_the_diamond():
 	assert diamond.Diamond('A').letter_sequence == ['A']
-    #assert diamond.Diamond('B').letter_sequence == ['A', 'B', 'A']
-    #assert diamond.Diamond('C').letter_sequence == ['A', 'B', 'C', 'B', 'A']
-    #assert diamond.Diamond('D').letter_sequence == ['A', 'B', 'C', 'D', 'C', 'B', 'A']
+	#assert diamond.Diamond('B').letter_sequence == ['A', 'B', 'A']
+	#assert diamond.Diamond('C').letter_sequence == ['A', 'B', 'C', 'B', 'A']
+	#assert diamond.Diamond('D').letter_sequence == ['A', 'B', 'C', 'D', 'C', 'B', 'A']
 
 def ignore_indents_is_list_of_indentation_for_each_line_of_the_diamond():
 	assert diamond.Diamond('A').indents == [0]
