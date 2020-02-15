@@ -98,7 +98,7 @@ public class DiamondCentristIterativeTest {
                 asList(' ', ' ', ' ', ' ', ' '),
                 asList(' ', ' ', ' ', ' ', ' '),
                 asList(' ', ' ', ' ', ' ', ' '),
-                asList('Z', ' ', ' ', ' ', ' '),
+                asList(' ', ' ', ' ', ' ', 'Z'),
                 asList(' ', ' ', ' ', ' ', ' '))
                 , Diamond.diamond('C'));
     }
