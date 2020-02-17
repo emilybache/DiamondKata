@@ -1,0 +1,14 @@
+{
+  "name": "diamondkata/codingdojo",
+  "description": "Diamond Kata for coding dojo",
+  "minimum-stability": "dev",
+  "license": "open source",
+  "require": {
+    "phpunit/phpunit": "7.5.20"
+  },
+  "autoload": {
+    "psr-0": {
+      "" : "src"
+    }
+  }
+}
