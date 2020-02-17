@@ -18,7 +18,7 @@ public class DiamondCentristIncrementalTest {
         assertEquals("A", Diamond.print('A'));
     }
 
-
+    @Ignore
     @Test
     public void size() {
         assertEquals(1, new Diamond('A').size());
@@ -27,6 +27,7 @@ public class DiamondCentristIncrementalTest {
         assertEquals(7, new Diamond('D').size());
     }
 
+    @Ignore
     @Test
     public void spaceArray() {
         assertEquals(asList(asList(' ')), new Diamond('A').spaceArray());
@@ -44,6 +45,7 @@ public class DiamondCentristIncrementalTest {
                 new Diamond('C').spaceArray());
     }
 
+    @Ignore
     @Test
     public void centerCoordinate() {
         assertEquals(new Point(0, 0), new Diamond('A').centerCoordinate());
@@ -52,6 +54,7 @@ public class DiamondCentristIncrementalTest {
         assertEquals(new Point(3, 3), new Diamond('D').centerCoordinate());
     }
 
+    @Ignore
     @Test
     public void place_letter_center() {
         assertEquals(asList(asList('A'))
@@ -70,7 +73,7 @@ public class DiamondCentristIncrementalTest {
                 , Diamond.placeLetter(new Diamond('C').spaceArray(), new Point(0,0), 'Z'));
     }
 
-
+    @Ignore
     @Test
     public void place_letter_at_other_coordinates() {
         assertEquals(asList(asList(' '))
@@ -89,6 +92,7 @@ public class DiamondCentristIncrementalTest {
                 , Diamond.placeLetter(new Diamond('C').spaceArray(), new Point(-1,0), 'Z'));
     }
 
+    @Ignore
     @Test
     public void coordinatesOfA() {
         assertEquals(asSet(new Point(0, 0)),
@@ -101,6 +105,7 @@ public class DiamondCentristIncrementalTest {
                 new Diamond('D').coordinates('A'));
     }
 
+    @Ignore
     @Test
     public void coordinatesOfMiddleLetter() {
         assertEquals(asSet(new Point(-1, 0), new Point(1, 0)),
@@ -111,6 +116,7 @@ public class DiamondCentristIncrementalTest {
                 new Diamond('D').coordinates('D'));
     }
 
+    @Ignore
     @Test
     public void coordinatesOfB() {
         assertEquals(asSet(new Point(-1, 1), new Point(-1, -1),
@@ -121,11 +127,13 @@ public class DiamondCentristIncrementalTest {
                 new Diamond('D').coordinates('B'));
     }
 
+    @Ignore
     @Test
     public void DiamondB() {
         assertEquals(" A \nB B\n A ", Diamond.print('B'));
     }
 
+    @Ignore
     @Test
     public void coordinatesOfC() {
         assertEquals(asSet(new Point(-2, 1), new Point(-2, -1),
