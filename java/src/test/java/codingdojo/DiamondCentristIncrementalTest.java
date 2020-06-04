@@ -63,14 +63,14 @@ public class DiamondCentristIncrementalTest {
                 asList(' ', ' ', ' '),
                 asList(' ', 'Z', ' '),
                 asList(' ', ' ', ' '))
-                , Diamond.placeLetter(new Diamond('B').spaceArray(), new Point(1,1), 'Z'));
+                , Diamond.placeLetter(new Diamond('B').spaceArray(), new Point(0,0), 'Z'));
         assertEquals(asList(
                 asList(' ', ' ', ' ', ' ', ' '),
                 asList(' ', ' ', ' ', ' ', ' '),
                 asList(' ', ' ', 'Z', ' ', ' '),
                 asList(' ', ' ', ' ', ' ', ' '),
                 asList(' ', ' ', ' ', ' ', ' '))
-                , Diamond.placeLetter(new Diamond('C').spaceArray(), new Point(2,2), 'Z'));
+                , Diamond.placeLetter(new Diamond('C').spaceArray(), new Point(0,0), 'Z'));
     }
 
     @Ignore
@@ -167,7 +167,7 @@ public class DiamondCentristIncrementalTest {
                         "D     D\n" +
                         " C   C \n" +
                         "  B B  \n" +
-                        "   A    ", Diamond.print('D'));
+                        "   A   ", Diamond.print('D'));
     }
 
 }
