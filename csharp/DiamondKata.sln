@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiamondKata.Tests", "DiamondKata.Tests\DiamondKata.Tests.csproj", "{1BBA5408-E5AC-44B1-9FF7-49C872C094A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiamondKata", "DiamondKata\DiamondKata.csproj", "{F4C64113-8585-4DAC-9F4B-5AC98227487A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BBA5408-E5AC-44B1-9FF7-49C872C094A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BBA5408-E5AC-44B1-9FF7-49C872C094A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BBA5408-E5AC-44B1-9FF7-49C872C094A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BBA5408-E5AC-44B1-9FF7-49C872C094A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4C64113-8585-4DAC-9F4B-5AC98227487A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4C64113-8585-4DAC-9F4B-5AC98227487A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4C64113-8585-4DAC-9F4B-5AC98227487A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4C64113-8585-4DAC-9F4B-5AC98227487A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
