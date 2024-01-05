@@ -92,11 +92,11 @@ def ignore_Diamond_plot_As():
     #      [" ", " ", "A", " ", " "]]
 
 def ignore_Diamond_plot_As_and_middle_letter():
-    assert diamond.Diamond('B') == \
+    assert diamond.Diamond('B').diamond() == \
         [[" ", "A", " "],
          ["B", " ", "B"],
          [" ", "A", " "]]
-    # assert diamond.Diamond('C') == \
+    # assert diamond.Diamond('C').diamond() == \
     #     [[" ", " ", "A", " ", " "],
     #      [" ", " ", " ", " ", " "],
     #      ["C", " ", " ", " ", "C"],
