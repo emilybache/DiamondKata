@@ -22,9 +22,10 @@ you should have a full working solution.
 """
 import diamond
 
- 
+
 def test_DiamondA():
     assert diamond.Diamond('A').print_diamond() == "A"
+
 
 def ignore_Diamond_with_only_spaces():
     assert diamond.Diamond('A').diamond() == [[" "]]
@@ -39,6 +40,7 @@ def ignore_Diamond_with_only_spaces():
     #      [" ", " ", " ", " ", " "],
     #      [" ", " ", " ", " ", " "]]
 
+
 def ignore_Diamond_with_center_marked_with_a_Z():
     assert diamond.Diamond('A').diamond() == [["Z"]]
     # assert diamond.Diamond('B').diamond() == \
@@ -52,6 +54,7 @@ def ignore_Diamond_with_center_marked_with_a_Z():
     #      [" ", " ", " ", " ", " "],
     #      [" ", " ", " ", " ", " "]]
 
+
 def ignore_Diamond_with_1_0_coordinates_marked_with_a_Z():
     assert diamond.Diamond('A').diamond() == [[" "]]
     # assert diamond.Diamond('B').diamond() == \
@@ -59,31 +62,34 @@ def ignore_Diamond_with_1_0_coordinates_marked_with_a_Z():
     #      [" ", " ", "Z"],
     #      [" ", " ", " "]]
 
+
 def ignore_Diamond_with_0_1_coordinates_marked_with_a_Z():
     assert diamond.Diamond('B').diamond() == \
-        [[" ", "Z", " "],
-         [" ", " ", " "],
-         [" ", " ", " "]]
+           [[" ", "Z", " "],
+            [" ", " ", " "],
+            [" ", " ", " "]]
     # assert diamond.Diamond('C').diamond() == \
     #     [[" ", " ", " ", " ", " "],
     #      [" ", " ", "Z", " ", " "],
     #      [" ", " ", " ", " ", " "],
     #      [" ", " ", " ", " ", " "],
     #      [" ", " ", " ", " ", " "]]
-     
+
+
 def ignore_Diamond_with_minus2_1_coordinates_marked_with_a_Z():
     assert diamond.Diamond('C').diamond() == \
-        [[" ", " ", " ", " ", " "],
-         ["Z", " ", " ", " ", " "],
-         [" ", " ", " ", " ", " "],
-         [" ", " ", " ", " ", " "],
-         [" ", " ", " ", " ", " "]]
+           [[" ", " ", " ", " ", " "],
+            ["Z", " ", " ", " ", " "],
+            [" ", " ", " ", " ", " "],
+            [" ", " ", " ", " ", " "],
+            [" ", " ", " ", " ", " "]]
+
 
 def ignore_Diamond_plot_As():
     assert diamond.Diamond('B').diamond() == \
-        [[" ", "A", " "],
-         [" ", " ", " "],
-         [" ", "A", " "]]
+           [[" ", "A", " "],
+            [" ", " ", " "],
+            [" ", "A", " "]]
     # assert diamond.Diamond('C').diamond() == \
     #     [[" ", " ", "A", " ", " "],
     #      [" ", " ", " ", " ", " "],
@@ -91,11 +97,12 @@ def ignore_Diamond_plot_As():
     #      [" ", " ", " ", " ", " "],
     #      [" ", " ", "A", " ", " "]]
 
+
 def ignore_Diamond_plot_As_and_middle_letter():
     assert diamond.Diamond('B').diamond() == \
-        [[" ", "A", " "],
-         ["B", " ", "B"],
-         [" ", "A", " "]]
+           [[" ", "A", " "],
+            ["B", " ", "B"],
+            [" ", "A", " "]]
     # assert diamond.Diamond('C').diamond() == \
     #     [[" ", " ", "A", " ", " "],
     #      [" ", " ", " ", " ", " "],
@@ -111,16 +118,18 @@ def ignore_Diamond_plot_As_and_middle_letter():
     #      [" ", " ", " ", " ", " ", " ", " "],
     #      [" ", " ", " ", "A", " ", " ", " "]]
 
+
 def ignore_DiamondB():
     assert diamond.Diamond('B').print_diamond() == " A\nB B\n A"
- 
+
+
 def ignore_Diamond_plot_other_letter():
     assert diamond.Diamond('C').diamond() == \
-        [[" ", " ", "A", " ", " "],
-         [" ", "B", " ", "B", " "],
-         ["C", " ", " ", " ", "C"],
-         [" ", "B", " ", "B", " "],
-         [" ", " ", "A", " ", " "]]
+           [[" ", " ", "A", " ", " "],
+            [" ", "B", " ", "B", " "],
+            ["C", " ", " ", " ", "C"],
+            [" ", "B", " ", "B", " "],
+            [" ", " ", "A", " ", " "]]
     # assert diamond.Diamond('D').diamond() == \
     #     [[" ", " ", " ", "A", " ", " ", " "],
     #      [" ", " ", "B", " ", "B", " ", " "],
@@ -130,6 +139,7 @@ def ignore_Diamond_plot_other_letter():
     #      [" ", " ", "B", " ", "B", " ", " "],
     #      [" ", " ", " ", "A", " ", " ", " "]]
 
+
 def ignore_DiamondC():
     assert diamond.Diamond('C').print_diamond() == """\
   A
@@ -137,6 +147,7 @@ def ignore_DiamondC():
 C   C
  B B
   A"""
+
 
 def ignore_DiamondD():
     assert diamond.Diamond('D').print_diamond() == """\
