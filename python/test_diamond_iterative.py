@@ -25,15 +25,18 @@ from approvaltests import verify
 import diamond
 
 
-def test_diamondA():
-    verify(diamond.Diamond('A').print_diamond())
+def test_diamonds():
+    result = f"""\
+Diamond A:
+{diamond.Diamond('A').print_diamond()}
 
-def test_diamondB():
-    verify(diamond.Diamond('B').print_diamond())
+Diamond B:
+{diamond.Diamond('B').print_diamond()}
 
-def test_diamondC():
-    verify(diamond.Diamond('C').print_diamond())
+Diamond C:
+{diamond.Diamond('C').print_diamond()}
 
-def test_diamondD():
-    verify(diamond.Diamond('D').print_diamond())
-
+Diamond D:
+{diamond.Diamond('D').print_diamond()}
+"""
+    verify(result)
