@@ -26,18 +26,18 @@ def ignore_test_size():
 
 
 def ignore_test_diamond_spaces():
-    assert Diamond("A.diamond_spaces()") == [[" "]]
-    # assert Diamond("B").diamond_spaces() ==
+    assert Diamond("A").diamond_spaces() == [[" "]]
+    # assert Diamond("B").diamond_spaces() == \
     #                              [[" ", " ", " "],
     #                               [" ", " ", " "],
     #                               [" ", " ", " "]]
-    # assert Diamond("C").diamond_spaces() ==
+    # assert Diamond("C").diamond_spaces() == \
     #                              [[" ", " ", " ", " ", " "],
     #                               [" ", " ", " ", " ", " "],
     #                               [" ", " ", " ", " ", " "],
     #                               [" ", " ", " ", " ", " "],
     #                               [" ", " ", " ", " ", " "]]
-    # assert Diamond("D").diamond_spaces() ==
+    # assert Diamond("D").diamond_spaces() == \
     #                              [[" ", " ", " ", " ", " ", " ", " "],
     #                               [" ", " ", " ", " ", " ", " ", " "],
     #                               [" ", " ", " ", " ", " ", " ", " "],
@@ -90,8 +90,7 @@ def ignore_test_coordinates_of_A():
 
 
 def ignore_test_coordinates_middle_letter():
-    assert {(0, 0)} == Diamond("A").coordinates("A")
-    # assert {(-1, 0), (1, 0)} == Diamond("B").coordinates("B")
+    assert {(-1, 0), (1, 0)} == Diamond("B").coordinates("B")
     # assert {(-2, 0), (2, 0)} == Diamond("C").coordinates("C")
     # assert {(-3, 0), (3, 0)} == Diamond("D").coordinates("D")
 
