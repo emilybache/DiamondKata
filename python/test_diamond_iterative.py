@@ -24,7 +24,7 @@ from approvaltests import verify
 
 import diamond
 
-
+# instructions - get this output to look like the file named iteration1 then iteration2 etc
 def test_diamonds():
     result = f"""\
 Diamond A:

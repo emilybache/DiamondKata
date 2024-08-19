@@ -1,0 +1,27 @@
+Diamond A:
+A
+
+
+Diamond B:
+ A 
+ B 
+ A 
+
+
+Diamond C:
+  A  
+  B  
+  C  
+  B  
+  A  
+
+
+Diamond D:
+   A   
+   B   
+   C   
+   D   
+   C   
+   B   
+   A   
+
