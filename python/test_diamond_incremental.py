@@ -11,53 +11,104 @@ Instructions:
 5. When all the test cases in this file are uncommented and passing, you should have a full working solution.
 """
 
-import diamond
+from diamond import *
 
 
-def test_diamondA_has_one_line_containing_a():
-    assert diamond.Diamond('A').print_diamond() == "A"
+def test_A_Diamond():
+    assert "A\n" == Diamond("A").print_diamond()
 
 
-def ignore_letter_sequence_is_list_of_letters_on_each_line_of_the_diamond():
-    assert diamond.Diamond('A').letter_sequence == ['A']
+def ignore_test_size():
+    assert Diamond("A").size() == 1
+    # assert Diamond("B").size() == 3
+    # assert Diamond("C").size() == 5
+    # assert Diamond("D").size() == 7
 
 
-# assert diamond.Diamond('B').letter_sequence == ['A', 'B', 'A']
-# assert diamond.Diamond('C').letter_sequence == ['A', 'B', 'C', 'B', 'A']
-# assert diamond.Diamond('D').letter_sequence == ['A', 'B', 'C', 'D', 'C', 'B', 'A']
-
-def ignore_indents_is_list_of_indentation_for_each_line_of_the_diamond():
-    assert diamond.Diamond('A').indents == [0]
-
-
-# assert diamond.Diamond('B').indents == [1,0,1]
-# assert diamond.Diamond('C').indents == [2,1,0,1,2]
-# assert diamond.Diamond('D').indents == [3,2,1,0,1,2,3]
-
-def ignore_between_is_list_of_how_many_middle_spaces_between_the_repeated_letter_for_each_line_of_the_diamond():
-    assert diamond.Diamond('A').between == [0]
-
-
-# assert diamond.Diamond('B').between == [0,1,0]
-# assert diamond.Diamond('C').between == [0,1,3,1,0]
-# assert diamond.Diamond('D').between == [0,1,3,5,3,1,0]
-
-def ignore_one_row_is_a_list_representing_one_diamond_row():
-    assert diamond.Diamond('A').one_row('A', indent=0, between=0) == "A"
+def ignore_test_diamond_spaces():
+    assert Diamond("A.diamond_spaces()") == [[" "]]
+    # assert Diamond("B").diamond_spaces() ==
+    #                              [[" ", " ", " "],
+    #                               [" ", " ", " "],
+    #                               [" ", " ", " "]]
+    # assert Diamond("C").diamond_spaces() ==
+    #                              [[" ", " ", " ", " ", " "],
+    #                               [" ", " ", " ", " ", " "],
+    #                               [" ", " ", " ", " ", " "],
+    #                               [" ", " ", " ", " ", " "],
+    #                               [" ", " ", " ", " ", " "]]
+    # assert Diamond("D").diamond_spaces() ==
+    #                              [[" ", " ", " ", " ", " ", " ", " "],
+    #                               [" ", " ", " ", " ", " ", " ", " "],
+    #                               [" ", " ", " ", " ", " ", " ", " "],
+    #                               [" ", " ", " ", " ", " ", " ", " "],
+    #                               [" ", " ", " ", " ", " ", " ", " "],
+    #                               [" ", " ", " ", " ", " ", " ", " "],
+    #                               [" ", " ", " ", " ", " ", " ", " "]]
 
 
-# assert diamond.Diamond('B').one_row('A', indent=1, between=0) == " A"
-# assert diamond.Diamond('B').one_row('B', indent=0, between=1) == "B B"
-# assert diamond.Diamond('D').one_row('C', indent=1, between=3) == " C   C"
+def ignore_test_center_coordinate():
+    assert (0, 0) == Diamond("A").center_coordinate()
+    # assert (1, 1) == Diamond("B").center_coordinate()
+    # assert (2, 2) == Diamond("C").center_coordinate()
+    # assert (3, 3) == Diamond("D").center_coordinate()
 
-def ignore_rows_is_a_list_of_all_diamond_rows():
-    assert diamond.Diamond('A').rows() == ["A"]
+
+def ignore_test_place_letter_center():
+    assert [["Z"]] == Diamond("A").place_letter("Z", {(0,0)})
+    # assert [[" ", " ", " "],
+    #         [" ", "Z", " "],
+    #         [" ", " ", " "]] ==
+    #         Diamond("B").place_letter("Z", {(0,0)})
+    # assert [[" ", " ", " ", " ", " "],
+    #         [" ", " ", " ", " ", " "],
+    #         [" ", " ", "Z", " ", " "],
+    #         [" ", " ", " ", " ", " "],
+    #         [" ", " ", " ", " ", " "]] ==
+    #         Diamond("C").place_letter("Z", {(0,0)})
+
+def ignore_test_place_letter_off_center():
+    assert [["Z", " ", " "],
+            [" ", " ", " "],
+            [" ", " ", " "]] == Diamond("B").place_letter("A", {(-1, 1)})
+    # assert [[" ", " ", " "],
+    #         [" ", " ", " "],
+    #         ["Z", " ", " "]] == Diamond("B").place_letter("A", {(-1, -1)})
+    # assert [[" ", "Z", " "],
+    #         [" ", " ", " "],
+    #         [" ", "Z", " "]] == Diamond("B").place_letter("A", {(0, 1), (0, -1)})
+    # assert [[" ", " ", " "],
+    #         ["Z", " ", "Z"],
+    #         [" ", " ", " "]] == Diamond("B").place_letter("A", {(-1, 0), (1, 0)})
 
 
-# assert diamond.Diamond('B').rows() == [" A", "B B", " A"]
+def ignore_test_coordinates_of_A():
+    assert {(0, 0)} == Diamond("A").coordinates("A")
+    # assert {(0, 1), (0, -1)} == Diamond("B").coordinates("A")
+    # assert {(0, 2), (0, -2)} == Diamond("C").coordinates("A")
+    # assert {(0, 3), (0, -3)} == Diamond("D").coordinates("A")
 
-def ignore_DiamondC_prints_correctly():
-    assert diamond.Diamond('C').print_diamond() == """\
+
+def ignore_test_coordinates_middle_letter():
+    assert {(0, 0)} == Diamond("A").coordinates("A")
+    # assert {(-1, 0), (1, 0)} == Diamond("B").coordinates("B")
+    # assert {(-2, 0), (2, 0)} == Diamond("C").coordinates("C")
+    # assert {(-3, 0), (3, 0)} == Diamond("D").coordinates("D")
+
+
+def ignore_test_coordinates_of_B():
+    assert {(-1, 1), (-1, -1), (1, 1), (1, -1)} == Diamond("C").coordinates("B")
+    # assert {(-1, 2), (-1, -2), (1, 2), (1, -2)} == Diamond("D").coordinates("B")
+    # assert {} == Diamond("A").coordinates("B")
+
+
+def ignore_test_coordinates_of_C():
+    assert {(-2, 1), (-2, -1), (2, 1), (2, -1)} == Diamond("D").coordinates("C")
+    # assert {} == Diamond("A").coordinates("C")
+
+
+def ignore_DiamondC():
+    assert Diamond('C').print_diamond() == """\
   A
  B B
 C   C
@@ -65,8 +116,8 @@ C   C
   A"""
 
 
-def ignore_DiamondD_is_correct():
-    assert diamond.Diamond('D').print_diamond() == """\
+def ignore_DiamondD():
+    assert Diamond('D').print_diamond() == """\
    A
   B B
  C   C
