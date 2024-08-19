@@ -19,23 +19,26 @@ def test_A_Diamond():
 
 
 def ignore_test_size():
-    assert size("A") == 1
-    # assert size("B") == 3
-    # assert size("C") == 5
-    # assert size("D") == 7
+    assert Diamond("A").size() == 1
+    # assert Diamond("B").size() == 3
+    # assert Diamond("C").size() == 5
+    # assert Diamond("D").size() == 7
 
 
 def ignore_test_diamond_spaces():
-    assert diamond_spaces("A") == [[" "]]
-    # assert diamond_spaces("B") == [[" ", " ", " "],
+    assert Diamond("A.diamond_spaces()") == [[" "]]
+    # assert Diamond("B").diamond_spaces() ==
+    #                              [[" ", " ", " "],
     #                               [" ", " ", " "],
     #                               [" ", " ", " "]]
-    # assert diamond_spaces("C") == [[" ", " ", " ", " ", " "],
+    # assert Diamond("C").diamond_spaces() ==
+    #                              [[" ", " ", " ", " ", " "],
     #                               [" ", " ", " ", " ", " "],
     #                               [" ", " ", " ", " ", " "],
     #                               [" ", " ", " ", " ", " "],
     #                               [" ", " ", " ", " ", " "]]
-    # assert diamond_spaces("D") == [[" ", " ", " ", " ", " ", " ", " "],
+    # assert Diamond("D").diamond_spaces() ==
+    #                              [[" ", " ", " ", " ", " ", " ", " "],
     #                               [" ", " ", " ", " ", " ", " ", " "],
     #                               [" ", " ", " ", " ", " ", " ", " "],
     #                               [" ", " ", " ", " ", " ", " ", " "],
@@ -45,62 +48,63 @@ def ignore_test_diamond_spaces():
 
 
 def ignore_test_center_coordinate():
-    assert (0, 0) == center_coordinate("A")
-    # assert (1, 1) == center_coordinate("B")
-    # assert (2, 2) == center_coordinate("C")
-    # assert (3, 3) == center_coordinate("D")
+    assert (0, 0) == Diamond("A").center_coordinate()
+    # assert (1, 1) == Diamond("B").center_coordinate()
+    # assert (2, 2) == Diamond("C").center_coordinate()
+    # assert (3, 3) == Diamond("D").center_coordinate()
 
 
 def ignore_test_place_letter_center():
-    assert [["A"]] == place_letter("A", {(0, 0)}, middle_letter="A", spaces=diamond_spaces("A"))
+    assert [["Z"]] == Diamond("A").place_letter("Z", {(0,0)})
     # assert [[" ", " ", " "],
-    #         [" ", "A", " "],
-    #         [" ", " ", " "]] == place_letter("A", {(0, 0)}, middle_letter="B", spaces=diamond_spaces("B"))
+    #         [" ", "Z", " "],
+    #         [" ", " ", " "]] ==
+    #         Diamond("B").place_letter("Z", {(0,0)})
     # assert [[" ", " ", " ", " ", " "],
     #         [" ", " ", " ", " ", " "],
-    #         [" ", " ", "A", " ", " "],
+    #         [" ", " ", "Z", " ", " "],
     #         [" ", " ", " ", " ", " "],
-    #         [" ", " ", " ", " ", " "]] == place_letter("A", {(0, 0)}, middle_letter="C", spaces=diamond_spaces("C"))
-
+    #         [" ", " ", " ", " ", " "]] ==
+    #         Diamond("C").place_letter("Z", {(0,0)})
 
 def ignore_test_place_letter_off_center():
-    assert [["A", " ", " "],
+    assert [["Z", " ", " "],
             [" ", " ", " "],
-            [" ", " ", " "]] == place_letter("A", {(-1, 1)}, middle_letter="B", spaces=diamond_spaces("B"))
+            [" ", " ", " "]] == Diamond("B").place_letter("A", {(-1, 1)})
     # assert [[" ", " ", " "],
     #         [" ", " ", " "],
-    #         ["A", " ", " "]] == place_letter("A", {(-1, -1)}, middle_letter="B", spaces=diamond_spaces("B"))
-    # assert [[" ", "A", " "],
+    #         ["Z", " ", " "]] == Diamond("B").place_letter("A", {(-1, -1)})
+    # assert [[" ", "Z", " "],
     #         [" ", " ", " "],
-    #         [" ", "A", " "]] == place_letter("A", {(0, 1), (0, -1)}, middle_letter="B", spaces=diamond_spaces("B"))
+    #         [" ", "Z", " "]] == Diamond("B").place_letter("A", {(0, 1), (0, -1)})
     # assert [[" ", " ", " "],
-    #         ["A", " ", "A"],
-    #         [" ", " ", " "]] == place_letter("A", {(-1, 0), (1, 0)}, middle_letter="B", spaces=diamond_spaces("B"))
+    #         ["Z", " ", "Z"],
+    #         [" ", " ", " "]] == Diamond("B").place_letter("A", {(-1, 0), (1, 0)})
 
 
 def ignore_test_coordinates_of_A():
-    assert {(0, 0)} == coordinates("A", middle_letter="A")
-    # assert {(0, 1), (0, -1)} == coordinates("A", middle_letter="B")
-    # assert {(0, 2), (0, -2)} == coordinates("A", middle_letter="C")
-    # assert {(0, 3), (0, -3)} == coordinates("A", middle_letter="D")
+    assert {(0, 0)} == Diamond("A").coordinates("A")
+    # assert {(0, 1), (0, -1)} == Diamond("B").coordinates("A")
+    # assert {(0, 2), (0, -2)} == Diamond("C").coordinates("A")
+    # assert {(0, 3), (0, -3)} == Diamond("D").coordinates("A")
 
 
 def ignore_test_coordinates_middle_letter():
-    assert {(0, 0)} == coordinates("A", middle_letter="A")
-    # assert {(-1, 0), (1, 0)} == coordinates("B", middle_letter="B")
-    # assert {(-2, 0), (2, 0)} == coordinates("C", middle_letter="C")
-    # assert {(-3, 0), (3, 0)} == coordinates("D", middle_letter="D")
+    assert {(0, 0)} == Diamond("A").coordinates("A")
+    # assert {(-1, 0), (1, 0)} == Diamond("B").coordinates("B")
+    # assert {(-2, 0), (2, 0)} == Diamond("C").coordinates("C")
+    # assert {(-3, 0), (3, 0)} == Diamond("D").coordinates("D")
 
 
 def ignore_test_coordinates_of_B():
-    assert {(-1, 1), (-1, -1), (1, 1), (1, -1)} == coordinates("B", middle_letter="C")
-    # assert {(-1, 2), (-1, -2), (1, 2), (1, -2)} == coordinates("B", middle_letter="D")
-    # assert {} == coordinates("B", middle_letter="A")
+    assert {(-1, 1), (-1, -1), (1, 1), (1, -1)} == Diamond("C").coordinates("B")
+    # assert {(-1, 2), (-1, -2), (1, 2), (1, -2)} == Diamond("D").coordinates("B")
+    # assert {} == Diamond("A").coordinates("B")
 
 
 def ignore_test_coordinates_of_C():
-    assert {(-2, 1), (-2, -1), (2, 1), (2, -1)} == coordinates("C", middle_letter="D")
-    # assert {} == coordinates("C", middle_letter="A")
+    assert {(-2, 1), (-2, -1), (2, 1), (2, -1)} == Diamond("D").coordinates("C")
+    # assert {} == Diamond("A").coordinates("C")
 
 
 def ignore_DiamondC():
