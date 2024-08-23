@@ -5,7 +5,7 @@ to run the tests, use 'py.test' - see http://pytest.org
 
 Instructions:
 Working from top to bottom, aim to get all the tests passing.
-Uncomment one line at a time. When a whole test is passing, remove the skip marking on the next one.
+Uncomment one assertion at a time. When a whole test is passing, remove the skip marking on the next one.
 The tests should all pass before you uncomment another line or unskip the next test.
 """
 import pytest
@@ -24,6 +24,7 @@ def test_letter_index():
 def test_quadrant_dimension():
     assert 0 == Diamond("A").quadrant_dimension()
     # assert 1 == Diamond("B").quadrant_dimension()
+    # assert Diamond("D").quadrant_dimension() == Diamond("D").letter_index("D")
     # assert 2 == Diamond("C").quadrant_dimension()
 
 @pytest.mark.skip
