@@ -4,123 +4,68 @@ These test cases can be used to test-drive a solution to the diamond kata, in an
 to run the tests, use 'py.test' - see http://pytest.org
 
 Instructions:
-1. Make the first test case for Diamond A pass
-2. change the 'ignore_' to 'test_' for the next test case. Make it pass.
-3. Uncomment the next line of the test case. Make it pass
-4. When all the lines of code in the test case are passing, continue to the next test case.
-5. When all the test cases in this file are uncommented and passing, you should have a full working solution.
+Working from top to bottom, aim to get all the tests passing.
+Uncomment one line at a time. When a whole test is passing, remove the skip marking on the next one.
+The tests should all pass before you uncomment another line or unskip the next test.
 """
+import pytest
+from approvaltests import verify
 
 from diamond import *
 
+def test_letter_index():
+    assert 0 == Diamond.letter_index("A")
+    # assert 1 == Diamond.letter_index("B")
+    # assert 2 == Diamond.letter_index("C")
+    # assert 3 == Diamond.letter_index("D")
+    # assert 4 == Diamond.letter_index("E")
 
-def test_A_Diamond():
-    assert "A\n" == Diamond("A").print_diamond()
+@pytest.mark.skip
+def test_quadrant_dimension():
+    assert 0 == Diamond("A").quadrant_dimension()
+    # assert 1 == Diamond("B").quadrant_dimension()
+    # assert 2 == Diamond("C").quadrant_dimension()
 
+@pytest.mark.skip
+def test_xy_coordinates():
+    assert [0] == list(Diamond("A").xy_coordinates())
+    # assert [-1, 0, 1] == list(Diamond("B").xy_coordinates())
+    # diamondD = Diamond("D")
+    # assert list(diamondD.xy_coordinates())[-1] == diamondD.quadrant_dimension()
+    # assert [-2, -1, 0, 1, 2] == list(Diamond("C").xy_coordinates())
 
-def ignore_test_size():
-    assert Diamond("A").size() == 1
-    # assert Diamond("B").size() == 3
-    # assert Diamond("C").size() == 5
-    # assert Diamond("D").size() == 7
+@pytest.mark.skip
+def test_letter_for_row():
+    assert "A" == Diamond("A").letter_for_row(0)
+    # assert "B" == Diamond("B").letter_for_row(0)
+    # assert "C" == Diamond("C").letter_for_row(0)
+    # assert "A" == Diamond("B").letter_for_row(1)
+    # assert "A" == Diamond("B").letter_for_row(-1)
+    # assert "A" == Diamond("C").letter_for_row(2)
+    # diamond = Diamond("C")
+    # assert ["A", "B", "C", "B", "A"] == [diamond.letter_for_row(y) for y in diamond.xy_coordinates()]
 
+@pytest.mark.skip
+def test_x_indices_for_letter():
+    assert {0} == set(Diamond("A").x_indices_for_letter("A"))
+    # assert {0} == set(Diamond("B").x_indices_for_letter("A"))
+    # assert {-1, 1} == set(Diamond("B").x_indices_for_letter("B"))
+    # assert {-1, 1} == set(Diamond("C").x_indices_for_letter("B"))
+    # assert {-1, 1} == set(Diamond("D").x_indices_for_letter("B"))
+    # assert {-2, 2} == set(Diamond("C").x_indices_for_letter("C"))
+    # diamond = Diamond("C")
+    # assert [" ", "B", " ", "B", " "] == ["B"
+    #                                      if x in diamond.x_indices_for_letter("B")
+    #                                      else " "
+    #                                      for x in diamond.xy_coordinates()]
 
-def ignore_test_diamond_spaces():
-    assert Diamond("A").diamond_spaces() == [[" "]]
-    # assert Diamond("B").diamond_spaces() == \
-    #                              [[" ", " ", " "],
-    #                               [" ", " ", " "],
-    #                               [" ", " ", " "]]
-    # assert Diamond("C").diamond_spaces() == \
-    #                              [[" ", " ", " ", " ", " "],
-    #                               [" ", " ", " ", " ", " "],
-    #                               [" ", " ", " ", " ", " "],
-    #                               [" ", " ", " ", " ", " "],
-    #                               [" ", " ", " ", " ", " "]]
-    # assert Diamond("D").diamond_spaces() == \
-    #                              [[" ", " ", " ", " ", " ", " ", " "],
-    #                               [" ", " ", " ", " ", " ", " ", " "],
-    #                               [" ", " ", " ", " ", " ", " ", " "],
-    #                               [" ", " ", " ", " ", " ", " ", " "],
-    #                               [" ", " ", " ", " ", " ", " ", " "],
-    #                               [" ", " ", " ", " ", " ", " ", " "],
-    #                               [" ", " ", " ", " ", " ", " ", " "]]
+@pytest.mark.skip
+def test_row_for_letter():
+    assert "A" == Diamond("A").row_for_letter("A")
+    # assert " A " == Diamond("B").row_for_letter("A")
+    # assert "B B" == Diamond("B").row_for_letter("B")
+    # assert " B B " == Diamond("C").row_for_letter("B")
 
-
-def ignore_test_center_coordinate():
-    assert (0, 0) == Diamond("A").center_coordinate()
-    # assert (1, 1) == Diamond("B").center_coordinate()
-    # assert (2, 2) == Diamond("C").center_coordinate()
-    # assert (3, 3) == Diamond("D").center_coordinate()
-
-
-def ignore_test_place_letter_center():
-    assert [["Z"]] == Diamond("A").place_letter("Z", {(0,0)})
-    # assert [[" ", " ", " "],
-    #         [" ", "Z", " "],
-    #         [" ", " ", " "]] ==
-    #         Diamond("B").place_letter("Z", {(0,0)})
-    # assert [[" ", " ", " ", " ", " "],
-    #         [" ", " ", " ", " ", " "],
-    #         [" ", " ", "Z", " ", " "],
-    #         [" ", " ", " ", " ", " "],
-    #         [" ", " ", " ", " ", " "]] ==
-    #         Diamond("C").place_letter("Z", {(0,0)})
-
-def ignore_test_place_letter_off_center():
-    assert [["Z", " ", " "],
-            [" ", " ", " "],
-            [" ", " ", " "]] == Diamond("B").place_letter("A", {(-1, 1)})
-    # assert [[" ", " ", " "],
-    #         [" ", " ", " "],
-    #         ["Z", " ", " "]] == Diamond("B").place_letter("A", {(-1, -1)})
-    # assert [[" ", "Z", " "],
-    #         [" ", " ", " "],
-    #         [" ", "Z", " "]] == Diamond("B").place_letter("A", {(0, 1), (0, -1)})
-    # assert [[" ", " ", " "],
-    #         ["Z", " ", "Z"],
-    #         [" ", " ", " "]] == Diamond("B").place_letter("A", {(-1, 0), (1, 0)})
-
-
-def ignore_test_coordinates_of_A():
-    assert {(0, 0)} == Diamond("A").coordinates("A")
-    # assert {(0, 1), (0, -1)} == Diamond("B").coordinates("A")
-    # assert {(0, 2), (0, -2)} == Diamond("C").coordinates("A")
-    # assert {(0, 3), (0, -3)} == Diamond("D").coordinates("A")
-
-
-def ignore_test_coordinates_middle_letter():
-    assert {(-1, 0), (1, 0)} == Diamond("B").coordinates("B")
-    # assert {(-2, 0), (2, 0)} == Diamond("C").coordinates("C")
-    # assert {(-3, 0), (3, 0)} == Diamond("D").coordinates("D")
-
-
-def ignore_test_coordinates_of_B():
-    assert {(-1, 1), (-1, -1), (1, 1), (1, -1)} == Diamond("C").coordinates("B")
-    # assert {(-1, 2), (-1, -2), (1, 2), (1, -2)} == Diamond("D").coordinates("B")
-    # assert {} == Diamond("A").coordinates("B")
-
-
-def ignore_test_coordinates_of_C():
-    assert {(-2, 1), (-2, -1), (2, 1), (2, -1)} == Diamond("D").coordinates("C")
-    # assert {} == Diamond("A").coordinates("C")
-
-
-def ignore_DiamondC():
-    assert Diamond('C').print_diamond() == """\
-  A
- B B
-C   C
- B B
-  A"""
-
-
-def ignore_DiamondD():
-    assert Diamond('D').print_diamond() == """\
-   A
-  B B
- C   C
-D     D
- C   C
-  B B
-   A"""
+@pytest.mark.skip
+def test_print_diamond():
+    verify(Diamond("D").print_diamond())
