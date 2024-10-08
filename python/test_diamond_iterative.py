@@ -9,8 +9,8 @@ Instructions:
 * Approve the output (rename to '.approved.') if it's closer to what you want than what you had before.
 * Repeat until output matches problem description.
 
-The files named '.increment1.' etc are there as a guide to head towards.
-The file named '.increment6.' matches the problem description.
+The files named '.iteration1.' etc are there as a guide to head towards.
+The file named '.iteration6.' matches the problem description.
 """
 from approvaltests import verify
 
