@@ -1,5 +1,12 @@
 namespace Diamond.Test;
 
+/*
+ * These test cases can be used to test-drive a solution to the diamond kata, in an incremental manner. 
+   Instructions:
+   Working from top to bottom, aim to get all the tests passing.
+   Uncomment one assertion at a time. When a whole test is passing, remove the skip marking on the next one.
+   The tests should all pass before you uncomment another line or unskip the next test.
+ */
 public class DiamondIncrementalTest
 {
     [Fact]
@@ -24,11 +31,11 @@ public class DiamondIncrementalTest
     [Fact(Skip = "Skipping this test")]
     public void TestXYCoordinates()
     {
-        // Assert.Equal(new List<int> { 0 }, new List<int>(new Diamond('A').XYCoordinates()));
-        // Assert.Equal(new List<int> { -1, 0, 1 }, new List<int>(new Diamond('B').XYCoordinates()));
+        // Assert.Equal(new List<int> { 0 }, new Diamond('A').XYCoordinates());
+        // Assert.Equal(new List<int> { -1, 0, 1 }, new Diamond('B').XYCoordinates());
         // var diamondD = new Diamond('D');
-        // Assert.Equal(diamondD.QuadrantDimension(), new List<int>(diamondD.XYCoordinates()).Last());
-        // Assert.Equal(new List<int> { -2, -1, 0, 1, 2 }, new List<int>(new Diamond('C').XYCoordinates()));
+        // Assert.Equal(diamondD.QuadrantDimension(), diamondD.XYCoordinates()).Last();
+        // Assert.Equal(new List<int> { -2, -1, 0, 1, 2 }, new Diamond('C').XYCoordinates());
     }
 
     [Fact(Skip = "Skipping this test")]
