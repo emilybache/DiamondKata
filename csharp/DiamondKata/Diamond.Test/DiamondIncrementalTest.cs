@@ -2,10 +2,7 @@ namespace Diamond.Test;
 
 /*
  * These test cases can be used to test-drive a solution to the diamond kata, in an incremental manner. 
-   Instructions:
-   Working from top to bottom, aim to get all the tests passing.
-   Uncomment one assertion at a time. When a whole test is passing, remove the skip marking on the next one.
-   The tests should all pass before you uncomment another line or unskip the next test.
+ * There are more detailed instructions in the top level README in this repo.
  */
 public class DiamondIncrementalTest
 {

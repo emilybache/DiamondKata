@@ -1,25 +1,5 @@
 """
-These test cases can be used to test-drive a solution to the diamond kata, in an incremental manner.
-
-to run the tests, use 'py.test' - see http://pytest.org
-
-Instructions:
-Working from top to bottom, aim to get all the tests passing.
-Uncomment one assertion at a time. When a whole test is passing, remove the skip marking on the next one.
-The tests should all pass before you uncomment another line or unskip the next test.
-
-For incremental development, it helps to have a good picture of where you're heading. This is a sketch of
-the design you're heading towards - you may not end up exactly here but it gives you an idea:
-
-    def print_diamond(self):
-        result = ""
-        for y in self.xy_coordinates(self.quadrant_dimension()):
-            letter = self.letter_for_row(y)
-            row = self.row_for_letter(letter)
-            result += row + "\n"
-
-        return result
-
+These test cases can be used to test-drive a solution to the diamond kata, in an incremental manner. There are more detailed instructions in the top level README in this repo ../README.md
 """
 import pytest
 from approvaltests import verify
