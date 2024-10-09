@@ -1,5 +1,6 @@
 """
-These test cases can be used to test-drive a solution to the diamond kata, in an incremental manner. There are more detailed instructions in the top level README in this repo ../README.md
+These test cases can be used to test-drive a solution to the diamond kata, 
+in an incremental manner. There are more detailed instructions in the top level README in this repo ../README.md
 """
 import pytest
 from approvaltests import verify
