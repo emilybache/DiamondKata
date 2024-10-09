@@ -74,11 +74,11 @@ public class DiamondIncrementalTest
     }
 
     [Fact(Skip = "Skipping this test")]
-    public void TestPrintDiamond()
+    public async void TestPrintDiamond()
     {
         var diamond = new Diamond('D');
         var result = diamond.PrintDiamond();
         // Use Verify framework to verify the result
-        // Verifier.Verify(result);
+        // await Verifier.Verify(result);
     }
 }
