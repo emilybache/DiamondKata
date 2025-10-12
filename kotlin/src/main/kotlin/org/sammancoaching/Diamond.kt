@@ -2,7 +2,11 @@ package org.sammancoaching
 
 class Diamond(private val middleLetter: Char) {
     fun printDiamond(): String {
-        return "A\n"
+        return diamondRows().joinToString("\n")
+    }
+
+    fun diamondRows(): List<String> {
+        return listOf("A")
     }
 
     companion object {
